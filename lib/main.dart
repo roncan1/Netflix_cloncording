@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_clon/screen/home_screen.dart';
 import 'package:netflix_clon/widget/bottom_bar.dart';
 
 void main() {
@@ -25,10 +26,22 @@ class _MyAppState extends State<MyApp> {
           body: TabBarView(
             physics: NeverScrollableScrollPhysics(),
             children: <Widget>[
-              Container(),
-              Container(),
-              Container(),
-              Container(),
+              HomeScreen(),
+              Container(
+                child: Center(
+                  child: Text('search'),
+                ),
+              ),
+              Container(
+                child: Center(
+                  child: Text('save'),
+                ),
+              ),
+              Container(
+                child: Center(
+                  child: Text('list'),
+                ),
+              ),
             ],
           ),
           bottomNavigationBar: Bottom(),
